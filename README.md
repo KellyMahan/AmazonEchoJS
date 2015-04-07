@@ -26,7 +26,7 @@ to run echo_monitor you must provide the username, password, and callback url
 
 ## Thanks
 
-Thanks to Zach Feldmon @zachfeldmon for his original work with https://github.com/zachfeldman/alexa-home
+Thanks to Zach Feldman @zachfeldman for his original work with https://github.com/zachfeldman/alexa-home
 Portions of code written by @zachfeldman
 
 ## Contributing
