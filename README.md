@@ -1,6 +1,6 @@
 # AmazonEchoJS
 
-TODO: Write a gem description
+AmazonEchoJS is an executable to monitor Amazon echo for voice commands.
 
 ## Installation
 
@@ -20,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+to run echo_monitor you must provide the username, password, and callback url
+
+    echo_monitor email@domain.com 1234567890 'http://localhost:4567/command'
+
+## Thanks
+
+Thanks to Zach Feldmon @zachfeldmon for his original inspiration with his project https://github.com/zachfeldman/alexa-home
 
 ## Contributing
 
