@@ -1,8 +1,4 @@
 
-require 'headless'
-#require 'selenium-webdriver'
-
-
 module AmazonEchoJS
   
 end
