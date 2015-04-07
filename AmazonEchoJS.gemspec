@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["kmahan@kmahan.com"]
   spec.summary       = %q{AmazonEchoJS is an executable to monitor Amazon echo for voice commands.}
   spec.description   = %q{AmazonEchoJS is an executable to monitor Amazon echo for voice commands.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/KellyMahan/AmazonEchoJS"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
