@@ -30,7 +30,7 @@ module AmazonEchoJS
     def keep_alive
       while @running
         begin
-          kill
+          #kill no need to kill browser, just refresh the page.
           sleep(1)
           open_browser
           start_watcher
@@ -40,7 +40,7 @@ module AmazonEchoJS
         ensure
           kill
           puts "Killed browser."
-          @running = false
+          #@running = false #keep running even if error encountered.
         end
       end
     end
@@ -52,7 +52,7 @@ module AmazonEchoJS
       # capabilities = Selenium::WebDriver::Remote::Capabilities.phantomjs("phantomjs.page.settings.userAgent" => "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1468.0 Safari/537.36")
       # driver = Selenium::WebDriver.for :phantomjs, :desired_capabilities => capabilities
       # @browser = Watir::Browser.new driver
-      @browser = Watir::Browser.new
+      @browser ||= Watir::Browser.new
       @browser.goto ECHO_URL
       Watir::Wait.until { waiting_to_load }
       if @browser.url.match(/www\.amazon\.com\/ap\/signin/)
