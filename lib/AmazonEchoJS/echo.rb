@@ -19,7 +19,7 @@ module AmazonEchoJS
       #keep_alive
     end
     
-    def kill
+    def kill_browser
       if @running
         (@browser.close rescue nil) if @browser
         @running = false
@@ -30,7 +30,7 @@ module AmazonEchoJS
     def keep_alive
       while @running
         begin
-          #kill no need to kill browser, just refresh the page.
+          #kill_browser no need to kill browser, just refresh the page.
           sleep(1)
           open_browser
           start_watcher
@@ -38,7 +38,7 @@ module AmazonEchoJS
         rescue Exception => e
           puts e.message
         ensure
-          kill
+          kill_browser
           puts "Killed browser."
           #@running = false #keep running even if error encountered.
         end
