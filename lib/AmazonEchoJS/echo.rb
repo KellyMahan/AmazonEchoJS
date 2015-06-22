@@ -95,9 +95,10 @@ module AmazonEchoJS
       @browser.execute_script("
         var lastCommand = '"+@last_command+"';
         $(document).ajaxComplete(function(){
-          command = $('.dd-title.d-dialog-title').first().text()
+          command = $('.dd-title.d-dialog-title').first().text();
+          time = $('.d-dialog-item .sub-text').first().text();
           if(lastCommand != command){
-            $.get('#{@callback_url}?q='+command)
+            $.get('#{@callback_url}?q='+command+'&time='+time);
             lastCommand = command;
             console.log(command);
           }

@@ -1,3 +1,3 @@
 module AmazonEchoJS
-  VERSION = "0.0.06"
+  VERSION = "0.0.07"
 end
